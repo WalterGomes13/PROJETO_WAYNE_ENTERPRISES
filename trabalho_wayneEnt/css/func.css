@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--preto);
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header{
+    border-bottom: 0.01mm solid rgb(150, 150, 150);
+}
+
+#imagem{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--preto);
+    align-items: center;
+}
+
+#imagem img{
+    width: 100px;
+    height:fit-content;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+}
+
+main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+    background: linear-gradient(135deg, var(--cinza-escuro), #007bff); 
+    filter: blur(10px);
+}
+
+#veiculos{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: fit-content;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.veiculo{
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background: var(--cinza-escuro); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.veiculo img{
+    width:50%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
+}
+
+#divisoria{
+    background-color: rgb(150, 150, 150);
+    width:0.1mm;
+    opacity: 0.5;
+    height: 100%;
+}
+
+#equip{
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+#equipamentos{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cinza-escuro);
+    width: 92%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px; 
+    padding: 10px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.arma{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.arma:hover{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), #66b2ff);
+}
+
+.arma img{
+    width: 100px;
+    height: auto;
+}
+
+.arma p{
+    display: none;
+}
+
+#seguranca {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-escuro);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 94%;
+    height: 400px; 
+    overflow: hidden; 
+}
+
+#seguranca img {
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    border-radius: 20px;
+}
+
+#inform{
+    display: none;
+    flex-direction: column;
+    align-items:start;
+    background: linear-gradient(135deg, var(--cinza-escuro), #007bff);
+    color: white;
+    width: 800px;
+    height: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: animate;
+    animation-duration: 500ms;
+    gap: 0px;
+    z-index: 10;
+}
+
+@keyframes animate{
+    from{opacity: 1;}
+    from{opacity: 0;}
+  }
+
+#inform p{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#inform span{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#imgArma{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#imgArma img{
+    width:100%;
+    height: 100%;
+    margin: 0px;
+    object-fit:contain;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#closeBtn{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    position: absolute;
+    width: 30px; 
+    height: 30px;
+    top: 10px; 
+    right: 10px; 
+    background-color: rgba(146, 145, 145, 0.5);
+    cursor: pointer;
+}

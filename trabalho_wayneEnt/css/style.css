@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--preto);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+#imagem {
+    width: 300px;
+    height: 144.5px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    gap: 20px;
+    background-color: var(--cinza-escuro);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+}
+
+form h2{
+    color: white;
+    margin: 0;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    overflow: hidden;
+    width: 400px;
+}
+
+
+#inputs input {
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+#btn button {
+    width: 100%;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    background-color: var(--azul-claro);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn button:hover {
+    background-color: var(--azul-escuro);
+}
